@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script src="js/flexible.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="left"><i class="iconfont icon-xiangzuo"></i></div>
+            <div class="center">无连接</div>
+            <div class="right">
+                <i class="iconfont icon-gengduo-2"></i>
+                <i class="iconfont icon-riqixuanze"></i>
+            </div>
+        </header>
+        <main class="main">
+            <section class="tap">
+                <ul class="list">
+                    <li><i class="iconfont icon-cuo"></i></li>
+                    <li><i class="iconfont icon-shoucang1"></i></li>
+                    <li><i class="iconfont icon-gengduo-2"></i></li>
+                    <li><i class="iconfont icon-guangpan"></i></li>
+                </ul>
+            </section>
+            <section class="divs">
+                <div class="div1">
+
+                </div>
+                <div class="div2">
+
+                </div>
+                <div class="div3">
+
+                </div>
+                <div class="div4">
+
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul>
+                <li><i class="iconfont icon-gongzuo"></i></li>
+                <li>
+                    <i class="iconfont icon-arrow-small-left"></i>
+                </li>
+                <li>
+
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script>
+    var lis = document.querySelectorAll(".list li");
+    var divv = document.querySelectorAll(".divs div");
+    console.log(divv);
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onclick = function() {
+            for (var j = 0; j < lis.length; j++) {
+                lis[j].style.background = "";
+                divv[j].style.display = "none";
+            }
+            lis[this.index].style.background = "skyblue";
+            divv[this.index].style.display = "block";
+        }
+    }
+</script>
+
+</html>

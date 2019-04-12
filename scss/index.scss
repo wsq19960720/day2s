@@ -1,0 +1,108 @@
+@import "_mixin.scss";
+@import "common.scss";
+html,
+body {
+    @extend %full;
+}
+
+.wrapper {
+    @extend %full;
+    display: flex;
+    flex-direction: column;
+    .header {
+        width: 100%;
+        height: rem(40px);
+        background: pink;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(15px);
+        font-size: rem(15px);
+        .left {
+            width: rem(40px);
+            height: rem(40px);
+            line-height: rem(40px);
+        }
+        i {
+            font-size: rem(15px);
+        }
+        .right {
+            width: rem(40px);
+            height: rem(40px);
+            line-height: rem(40px);
+        }
+    }
+    .main {
+        width: 100%;
+        flex: 1;
+        .tap {
+            width: 100%;
+            height: rem(100px);
+            margin: rem(20px) 0;
+            border-bottom: 1px solid #ccc;
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li {
+                    width: rem(50px);
+                    height: rem(50px);
+                    margin-right: rem(20px);
+                    line-height: rem(50px);
+                    text-align: center;
+                    border-radius: 100%;
+                    border: 1px solid #ccc;
+                    i {
+                        font-size: rem(30px);
+                    }
+                }
+            }
+        }
+        .divs {
+            width: 100%;
+            height: rem(200px);
+            overflow: hidden;
+            .div1 {
+                width: 100%;
+                height: rem(200px);
+                background: #ccc;
+            }
+            .div2 {
+                width: 100%;
+                height: rem(200px);
+                background: pink;
+            }
+            .div3 {
+                width: 100%;
+                height: rem(200px);
+                background: red;
+            }
+            .div4 {
+                width: 100%;
+                height: rem(200px);
+                background: rgb(121, 96, 100);
+            }
+        }
+    }
+    .footer {
+        width: 100%;
+        height: rem(100px);
+        border-top: 1px solid #ccc;
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                width: 33%;
+                text-align: center;
+                i {
+                    font-size: rem(24px);
+                }
+            }
+        }
+    }
+}
